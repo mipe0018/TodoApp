@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <main class="app">
+<section class="weather">
+  <h2>Vejret lige nu</h2>
+  <p class="weather_info">Henter vejr...</p>
+</section>
+
+      <!-- Tasks -->
+      <input type="text" class="task_text" placeholder="Tilføj ny opgave...">
+
+      <label>
+        Skal opgaven udføres udendørs?
+        <input type="checkbox" class="outdoor_task">
+      </label>
+
+      <input type="date" class="task_date">
+
+      <button class="create_task">Opret opgave</button>
+
+      <ul class="tasks"></ul>
+
+
+      <!-- Lister -->
+      <input
+        type="text"
+        class="list_name"
+        placeholder="Hvad skal din liste hedde?"
+      >
+
+      <button class="create_list">Opret liste</button>
+
+      <ul class="lists"></ul>
+
+    </main>
+  </body>
+</html>

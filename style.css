@@ -1,0 +1,417 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    background-color: #d9c7b9;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #765f50;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* ========================================
+   APP CONTAINER
+======================================== */
+
+.app {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #eadbd0;
+    border: 1px solid #bca89a;
+    box-shadow:
+        0 2px 5px rgba(80, 60, 50, 0.15),
+        0 8px 20px rgba(80, 60, 50, 0.10);
+    border-radius: 8px;
+    padding: 28px;
+}
+
+
+/* ========================================
+   WEATHER
+======================================== */
+
+/* Diskret vejrvisning */
+
+.weather {
+    background-color: #dfcec2;
+    border: 1px solid #bca89a;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.weather h2 {
+    font-size: 14px;
+    margin: 0 0 3px;
+    font-weight: normal;
+    color: #765f50;
+}
+
+.weather_info {
+    margin: 0;
+    font-size: 13px;
+    color: #927b6b;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+input[type="text"],
+input[type="date"] {
+    background-color: #e5d3c7;
+    border: 1px solid #bca89a;
+    color: #765f50;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #c98ca5;
+    box-shadow: 0 0 0 2px rgba(201, 140, 165, 0.15);
+}
+
+input::placeholder {
+    color: #9d897b;
+    opacity: 1;
+}
+
+
+/* ========================================
+   TASK INPUT AREA
+======================================== */
+
+.task_text {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.outdoor_task {
+    accent-color: #c98ca5;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.task_date {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+button {
+    border: none;
+    background: transparent;
+    color: #c96f9b;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create_task,
+.create_list {
+    background-color: #c98ca5;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+.create_task:hover,
+.create_list:hover {
+    background-color: #b97691;
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   TASK LIST
+======================================== */
+
+.tasks {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 30px;
+}
+
+.tasks > li {
+    min-height: 55px;
+    background-color: #dfcec2;
+    border: 1px solid #bca89a;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* ========================================
+   TASK CHECKBOX
+======================================== */
+
+/* Runde checkbox */
+
+.task-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1px solid #a99182;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0;
+}
+
+.task-checkbox:checked {
+    background-color: #c98ca5;
+    border-color: #c98ca5;
+    position: relative;
+}
+
+.task-checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+}
+
+.tasks li > span:first-of-type {
+    flex: 1;
+    font-size: 14px;
+    color: #765f50;
+}
+
+
+/* ========================================
+   TASK STATUS
+======================================== */
+
+.task-available {
+    color: #78a66b;
+    font-size: 12px;
+}
+
+.task-unavailable {
+    color: #c76d6d;
+    font-size: 12px;
+}
+
+.task-checking {
+    color: #a58a72;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   EDIT / DELETE BUTTONS
+======================================== */
+
+.edit-task,
+.delete-task {
+    font-size: 11px;
+    padding: 3px 5px;
+}
+
+.edit-task:hover,
+.delete-task:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   LISTER
+======================================== */
+
+.list_name {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.lists {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+}
+
+.lists > li {
+    background-color: #dfcec2;
+    border: 1px solid #bca89a;
+    border-radius: 0;
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.lists > li > h2 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #765f50;
+}
+
+
+/* ========================================
+   ITEMS IN LISTS
+======================================== */
+
+.lists ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.lists ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 0;
+    border-top: 1px solid rgba(188, 168, 154, 0.5);
+    font-size: 13px;
+}
+
+.item-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1px solid #a99182;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0;
+}
+
+.item-checkbox:checked {
+    background-color: #c98ca5;
+    border-color: #c98ca5;
+    position: relative;
+}
+
+.item-checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+}
+
+
+/* ========================================
+   LIST COLORS
+======================================== */
+
+/*
+.lists ul li:nth-child(1) .item-checkbox {
+    background-color: #bd59e9;
+}
+
+.lists ul li:nth-child(2) .item-checkbox {
+    background-color: #367fe0;
+}
+
+.lists ul li:nth-child(3) .item-checkbox {
+    background-color: #42a94d;
+}
+*/
+
+
+/* ========================================
+   LIST BUTTONS
+======================================== */
+
+.add-item,
+.edit-list,
+.delete-list {
+    font-size: 11px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.add-item:hover,
+.edit-list:hover,
+.delete-list:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .app {
+        padding: 18px;
+    }
+
+    .tasks > li {
+        align-items: flex-start;
+    }
+
+    .task-available,
+    .task-unavailable,
+    .task-checking {
+        width: 100%;
+        margin-left: 30px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL SCREENS
+======================================== */
+
+@media (max-width: 375px) {
+    body {
+        padding: 5px;
+    }
+
+    .app {
+        padding: 12px;
+    }
+
+    .tasks > li {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 11px;
+    }
+}
