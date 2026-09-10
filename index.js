@@ -126,7 +126,7 @@ const tasks_ul = document.querySelector(".tasks");
 
 let task_arr = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// Sørger for at gamle tasks får et note-felt
+// Sørger for at tasks får et note-felt
 task_arr.forEach((task) => {
     if (task.note === undefined) {
         task.note = "";
@@ -436,7 +436,7 @@ function renderLists() {
             <input
                 type="text"
                 class="item-input"
-                placeholder="Tilføj item..."
+                placeholder="Tilføj indhold..."
             >
 
             <input
