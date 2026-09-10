@@ -62,16 +62,16 @@ function getWeather() {
 }
 
 function getWeatherText(code) {
-    if (code === 0) return "☀️ Klart";
-    if (code >= 1 && code <= 3) return "⛅ Skyet";
-    if (code >= 51 && code <= 57) return "🌦️ Støvregn";
-    if (code >= 61 && code <= 67) return "🌧️ Regn";
-    if (code >= 71 && code <= 77) return "❄️ Sne";
-    if (code >= 80 && code <= 82) return "🌧️ Regnbyger";
-    if (code >= 85 && code <= 86) return "🌨️ Snebyger";
-    if (code >= 95 && code <= 99) return "⛈️ Tordenvejr";
+    if (code === 0) return " Klart";
+    if (code >= 1 && code <= 3) return " Skyet";
+    if (code >= 51 && code <= 57) return " Støvregn";
+    if (code >= 61 && code <= 67) return " Regn";
+    if (code >= 71 && code <= 77) return " Sne";
+    if (code >= 80 && code <= 82) return " Regnbyger";
+    if (code >= 85 && code <= 86) return " Snebyger";
+    if (code >= 95 && code <= 99) return " Tordenvejr";
 
-    return "🌤️ Ukendt vejr";
+    return " Ukendt vejr";
 }
 
 function getTaskWeatherStatus(task) {
@@ -85,14 +85,14 @@ function getTaskWeatherStatus(task) {
     if (!weather.loaded) {
         return {
             possible: null,
-            text: "🌤️ Tjekker vejret..."
+            text: " Tjekker vejret..."
         };
     }
 
     if (weather.weatherCode >= 95 && weather.weatherCode <= 99) {
         return {
             possible: false,
-            text: "⛈️ Kan ikke udføres lige nu – tordenvejr"
+            text: " Kan ikke udføres lige nu – tordenvejr"
         };
     }
 
@@ -104,13 +104,13 @@ function getTaskWeatherStatus(task) {
     ) {
         return {
             possible: false,
-            text: "🌧️ Kan ikke udføres lige nu – det regner"
+            text: "Kan ikke udføres lige nu – det regner"
         };
     }
 
     return {
         possible: true,
-        text: "✅ Kan udføres – vejret er fint"
+        text: "Kan udføres – vejret er fint"
     };
 }
 
@@ -206,7 +206,7 @@ function renderTasks() {
 
             ${
                 task.date
-                    ? `<span>Dato ${task.date}</span>`
+                    ? `<span>Dato: ${task.date}</span>`
                     : ""
             }
 

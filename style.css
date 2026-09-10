@@ -121,6 +121,7 @@ label {
 
 .task_date {
     margin-bottom: 8px;
+    font-size: 13px;
 }
 
 
@@ -173,6 +174,7 @@ button {
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    font-size: 13px;
 }
 
 
@@ -211,7 +213,7 @@ button {
 
 .tasks li > span:first-of-type {
     flex: 1;
-    font-size: 14px;
+    font-size: 13px;
     color: #765f50;
 }
 
@@ -273,6 +275,7 @@ button {
     border-radius: 0;
     padding: 12px;
     margin-bottom: 8px;
+    font-size: 13px;
 }
 
 .lists > li > h2 {
@@ -348,6 +351,13 @@ button {
 }
 */
 
+/* ========================================
+   LIST date 
+======================================== */
+
+.item-date {
+    font-size: 13px;
+}
 
 /* ========================================
    LIST BUTTONS
