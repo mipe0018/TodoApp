@@ -201,12 +201,12 @@ function renderTasks() {
             <span>${task.taskTxt}</span>
 
             <span>
-                ${task.outdoor ? "🌳 Udendørs" : "🏠 Indendørs"}
+                ${task.outdoor ? "🏞 Udendørs" : "🏠︎ Indendørs"}
             </span>
 
             ${
                 task.date
-                    ? `<span>📅 ${task.date}</span>`
+                    ? `<span>Dato ${task.date}</span>`
                     : ""
             }
 
@@ -221,7 +221,7 @@ function renderTasks() {
             }
 
             <button class="note-task">
-                📝 Note
+                 Note
             </button>
 
             <button class="edit-task">
@@ -591,12 +591,12 @@ function renderLists() {
 
                 ${
                     item.date
-                        ? `<span>📅 ${item.date}</span>`
+                        ? `<span>Dato: ${item.date}</span>`
                         : ""
                 }
 
                 <button class="note-item">
-                    📝 Note
+                    Note
                 </button>
 
                 <button class="edit-item">
